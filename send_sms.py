@@ -22,7 +22,8 @@ def text_user():
 
 
 # Text user: custom
-def text_user(custom_message):
+def text_user_custom(custom_message):
+    custom_message = input("enter your message to send: ")
     message = client.messages.create(to=phone_number,
                                      from_="+14232502023",
                                      body=custom_message)
@@ -44,3 +45,5 @@ def text_user(custom_message):
 # Iterate through records (list of users texted)
 # for sms in client.messages.list():
 #     print(sms.to)
+
+text_user()
