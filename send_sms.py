@@ -10,38 +10,37 @@ auth_token = config('KEY')
 
 client = Client(account_sid, auth_token)
 
-
 # Text user: default
-def text_user(phone_number):
+def text_user(phone_number, name):
     message = client.messages.create(
         to=phone_number,
         from_="+14232502023",
         body=
-        "Hi!! This is Elizabeth and Alyssa on Twilio hacking at Technica 2021. Welcome to Trak!"
+        "Hi, " + name + "!! This is Elizabeth and Alyssa on Twilio hacking at Technica 2021. Welcome to Trak!"
     )
 
 
 # Text user: ride prepare
-def text_user_prepare():
+def text_user_prepare(phone_number, name):
     message = client.messages.create(
         to=phone_number,
         from_="+14232502023",
-        body="Get ready! Your ride is coming in 1 minute")
+        body="Get ready, " + name + "! Your ride is coming in 1 minute")
 
 
 # Text user: ride arrival
-def text_user_arrive():
+def text_user_arrive(phone_number):
     message = client.messages.create(to=phone_number,
                                      from_="+14232502023",
                                      body="Your ride is here! ✨")
 
 
 # Text user: custom
-def text_user_custom(custom_message):
-    custom_message = input("enter your message to send: ")
-    message = client.messages.create(to=phone_number,
-                                     from_="+14232502023",
-                                     body=custom_message)
+# def text_user_custom(custom_message, phone_number):
+#     custom_message = input("enter your message to send: ")
+#     message = client.messages.create(to=phone_number,
+#                                      from_="+14232502023",
+#                                      body=custom_message)
 
 
 # print(message.sid)
@@ -61,4 +60,5 @@ def text_user_custom(custom_message):
 # for sms in client.messages.list():
 #     print(sms.to)
 
-text_user()
+# Test
+# text_user(phone_number)
