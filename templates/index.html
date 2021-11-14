@@ -34,21 +34,27 @@
                 <center><img src="./../assets/logo_trak.png" alt="Trak logo"></center>
                 
                 <h1>Welcome to Trak</h1>
-                
+
                 <center><h2><i>find and Trak your ride</i></h2></center>
-                
 
                 <input class="input-name" placeholder="Name" type="text">
-                <input type="text" id="name" name="user_name">
+                <!-- <input type="text" id="name" name="user_name"> -->
                     
-                <label class="input-phone" placeholder="Phone number" type="number">
-                <input type="tel" id="phone" name="user_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <label class="input-phone" placeholder="Phone number" type="text">
+                <input type="text" id="phone" name="user_phone">
 
+                <center><p><i>about</i> | <i>legal</i></p></center>
             </fieldset>
 
-            <form action="screen2.html">
+            <form action="screen2.html" method="POST">
                 <button type="submit">Get on Trak</button>
             </form>
+
+            <!-- <form action="./../send_sms.py" method="get">
+                First Name: <input type="text" name="first_name"> <br />
+                Last Name: <input type="text" name="last_name" />
+                <input type="submit" value="Submit" />
+            </form> -->
 
         </div>
 

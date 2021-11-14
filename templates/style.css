@@ -30,6 +30,7 @@ input[type="number"],
 input[type="search"],
 textarea,
 select {
+  font-family: "Work Sans", sans-serif;
   background: rgba(255, 255, 255, 0.1);
   border: none;
   font-size: 16px;
@@ -37,11 +38,18 @@ select {
   margin: 0;
   outline: 0;
   padding: 15px;
-  width: 50%;
+  width: 30%;
   background-color: #e8eeef;
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 input[type="radio"],
@@ -56,6 +64,7 @@ select {
 }
 
 button {
+  font-family: "Work Sans", sans-serif;
   padding: 19px 39px 18px 39px; /*padding: 5px 10px;*/
   color: #ffffff;
   background-color: #838383;
@@ -63,17 +72,19 @@ button {
   text-align: center;
   font-style: normal;
   border: 4px solid #d7e3d5;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
   border: 1px solid #838383;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
   margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button:hover {
   color: #d7e3d5;
-  background-color: ##d7e3d5;
   box-shadow: 3px 3px #aaaaaa;
   cursor: pointer;
 }

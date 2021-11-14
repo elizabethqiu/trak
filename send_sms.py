@@ -6,27 +6,27 @@ account_sid = config('USER')
 # Your Auth Token from twilio.com/console
 auth_token = config('KEY')
 # Phone Number (US Only)
-phone_number = "+1" + input("enter your phone number (numbers only): ")
+# phone_number = "+1" + input("enter your phone number (numbers only): ")
 
 client = Client(account_sid, auth_token)
 
 
 # Text user: default
-def text_user(name):
+def text_user(phone_number):
     message = client.messages.create(
         to=phone_number,
         from_="+14232502023",
         body=
-        "Hi!! This is Elizabeth and Alyssa on Twilio hacking at Technica 2021. Welcome to trak!"
+        "Hi!! This is Elizabeth and Alyssa on Twilio hacking at Technica 2021. Welcome to Trak!"
     )
 
 
 # Text user: ride prepare
-def text_user_prepare(name):
-    message = client.messages.create(to=phone_number,
-                                     from_="+14232502023",
-                                     body="Get ready, " + name +
-                                     "! Your ride is coming in 1 minute")
+def text_user_prepare():
+    message = client.messages.create(
+        to=phone_number,
+        from_="+14232502023",
+        body="Get ready! Your ride is coming in 1 minute")
 
 
 # Text user: ride arrival
