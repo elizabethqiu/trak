@@ -12,13 +12,28 @@ client = Client(account_sid, auth_token)
 
 
 # Text user: default
-def text_user():
+def text_user(name):
     message = client.messages.create(
         to=phone_number,
         from_="+14232502023",
         body=
         "Hi!! This is Elizabeth and Alyssa on Twilio hacking at Technica 2021. Welcome to trak!"
     )
+
+
+# Text user: ride prepare
+def text_user_prepare(name):
+    message = client.messages.create(to=phone_number,
+                                     from_="+14232502023",
+                                     body="Get ready, " + name +
+                                     "! Your ride is coming in 1 minute")
+
+
+# Text user: ride arrival
+def text_user_arrive():
+    message = client.messages.create(to=phone_number,
+                                     from_="+14232502023",
+                                     body="Your ride is here! ✨")
 
 
 # Text user: custom
