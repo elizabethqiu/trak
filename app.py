@@ -18,7 +18,6 @@ def update_record():
     name = request.form['name']
     phone_number = request.form['phone_number']
     text_user(phone_number, name)
-    text_user_prepare(phone_number, name)
     text_user_arrive(phone_number, name)
     return render_template('screen2.html')
     # record = json.loads(request.data)

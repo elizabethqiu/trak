@@ -29,10 +29,10 @@ def text_user_prepare(phone_number, name):
 
 
 # Text user: ride arrival
-def text_user_arrive(phone_number):
+def text_user_arrive(phone_number, name):
     message = client.messages.create(to=phone_number,
                                      from_="+14232502023",
-                                     body="Your ride is here! ✨")
+                                     body=name + ", your ride is here! ✨")
 
 
 # Text user: custom
