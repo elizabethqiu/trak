@@ -25,7 +25,7 @@ def text_user_prepare(phone_number, name):
     message = client.messages.create(
         to=phone_number,
         from_="+14232502023",
-        body="Get ready, " + name + "! Your ride is coming in 1 minute")
+        body="Get ready, " + name + "! Your ride is coming in 1 minute.")
 
 
 # Text user: ride arrival
